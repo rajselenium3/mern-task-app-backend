@@ -10,7 +10,7 @@ const app = express();
 //Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(taskRoutes)
+app.use("/api/tasks", taskRoutes);
 
 //start server
 const PORT = process.env.PORT || 5000;
